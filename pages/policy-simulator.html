@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Policy Simulator | NEXUS 2040</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="page-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="particle-canvas"></canvas>
+    <div class="scan-lines"></div>
+    
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 40 40" fill="none">
+                        <path d="M20 2L37 11V29L20 38L3 29V11L20 2Z" stroke="currentColor" stroke-width="2"/>
+                        <path d="M20 14L28 18.5V27.5L20 32L12 27.5V18.5L20 14Z" fill="currentColor"/>
+                    </svg>
+                </div>
+                <span>NEXUS<span class="highlight">2040</span></span>
+            </a>
+            <a href="../index.html" class="back-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                <span>BACK TO HUB</span>
+            </a>
+        </div>
+    </nav>
+
+    <main class="system-page">
+        <section class="page-hero">
+            <div class="page-hero-content">
+                <span class="system-tag">SYSTEM 01</span>
+                <h1 class="page-title">AI-POWERED <span class="gradient-text">POLICY</span> SIMULATOR</h1>
+                <p class="page-desc">
+                    A multi-agent artificial intelligence system that simulates real-world policy impacts 
+                    across interconnected domains. Students input policies on climate, economics, or social 
+                    issues and observe cascading effects through our neural network models.
+                </p>
+                <div class="status-bar">
+                    <div class="status-item">
+                        <span class="status-dot active"></span>
+                        <span>SYSTEM OPERATIONAL</span>
+                    </div>
+                    <div class="status-item">
+                        <span>MODELS: 47</span>
+                    </div>
+                    <div class="status-item">
+                        <span>ACCURACY: 94.7%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="blueprint-section">
+            <h2 class="section-title">SYSTEM <span class="gradient-text">ARCHITECTURE</span></h2>
+            <div class="large-blueprint">
+                <svg viewBox="0 0 1000 500" class="blueprint-svg">
+                    <defs>
+                        <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+                            <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,255,255,0.1)" stroke-width="0.5"/>
+                        </pattern>
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <rect width="1000" height="500" fill="url(#grid)"/>
+                    
+                    <!-- Input Module -->
+                    <g class="input-module" filter="url(#glow)">
+                        <rect x="50" y="180" width="120" height="140" rx="8" fill="none" stroke="var(--cyan)" stroke-width="2"/>
+                        <text x="110" y="220" text-anchor="middle" fill="var(--cyan)" font-size="12" font-family="Orbitron">POLICY</text>
+                        <text x="110" y="240" text-anchor="middle" fill="var(--cyan)" font-size="12" font-family="Orbitron">INPUT</text>
+                        <rect x="70" y="260" width="80" height="8" rx="2" fill="rgba(0,255,255,0.3)"/>
+                        <rect x="70" y="275" width="60" height="8" rx="2" fill="rgba(0,255,255,0.3)"/>
+                        <rect x="70" y="290" width="70" height="8" rx="2" fill="rgba(0,255,255,0.3)"/>
+                    </g>
+                    
+                    <!-- Data Flow Lines -->
+                    <path d="M170 250 L250 150" stroke="var(--cyan)" stroke-width="2" stroke-dasharray="8 4" class="flow-line"/>
+                    <path d="M170 250 L250 250" stroke="var(--cyan)" stroke-width="2" stroke-dasharray="8 4" class="flow-line"/>
+                    <path d="M170 250 L250 350" stroke="var(--cyan)" stroke-width="2" stroke-dasharray="8 4" class="flow-line"/>
+                    
+                    <!-- Processing Modules -->
+                    <g class="process-module economic" filter="url(#glow)">
+                        <circle cx="320" cy="150" r="60" fill="none" stroke="var(--purple)" stroke-width="2"/>
+                        <circle cx="320" cy="150" r="45" fill="rgba(138,43,226,0.1)" stroke="var(--purple)" stroke-width="1"/>
+                        <text x="320" y="140" text-anchor="middle" fill="var(--purple)" font-size="11" font-family="Orbitron">ECONOMIC</text>
+                        <text x="320" y="158" text-anchor="middle" fill="var(--purple)" font-size="11" font-family="Orbitron">MODEL</text>
+                        <text x="320" y="175" text-anchor="middle" fill="var(--text-dim)" font-size="9" font-family="Share Tech Mono">GDP | TRADE | JOBS</text>
+                    </g>
+                    
+                    <g class="process-module climate" filter="url(#glow)">
+                        <circle cx="320" cy="250" r="60" fill="none" stroke="var(--green)" stroke-width="2"/>
+                        <circle cx="320" cy="250" r="45" fill="rgba(0,255,136,0.1)" stroke="var(--green)" stroke-width="1"/>
+                        <text x="320" y="240" text-anchor="middle" fill="var(--green)" font-size="11" font-family="Orbitron">CLIMATE</text>
+                        <text x="320" y="258" text-anchor="middle" fill="var(--green)" font-size="11" font-family="Orbitron">ENGINE</text>
+                        <text x="320" y="275" text-anchor="middle" fill="var(--text-dim)" font-size="9" font-family="Share Tech Mono">CO2 | TEMP | ECOSYS</text>
+                    </g>
+                    
+                    <g class="process-module social" filter="url(#glow)">
+                        <circle cx="320" cy="350" r="60" fill="none" stroke="var(--orange)" stroke-width="2"/>
+                        <circle cx="320" cy="350" r="45" fill="rgba(255,136,0,0.1)" stroke="var(--orange)" stroke-width="1"/>
+                        <text x="320" y="340" text-anchor="middle" fill="var(--orange)" font-size="11" font-family="Orbitron">SOCIAL</text>
+                        <text x="320" y="358" text-anchor="middle" fill="var(--orange)" font-size="11" font-family="Orbitron">DYNAMICS</text>
+                        <text x="320" y="375" text-anchor="middle" fill="var(--text-dim)" font-size="9" font-family="Share Tech Mono">EQUITY | HEALTH | EDU</text>
+                    </g>
+                    
+                    <!-- Neural Core -->
+                    <path d="M380 150 L480 200" stroke="var(--purple)" stroke-width="1" stroke-dasharray="4 2" class="flow-line"/>
+                    <path d="M380 250 L480 250" stroke="var(--green)" stroke-width="1" stroke-dasharray="4 2" class="flow-line"/>
+                    <path d="M380 350 L480 300" stroke="var(--orange)" stroke-width="1" stroke-dasharray="4 2" class="flow-line"/>
+                    
+                    <g class="neural-core" filter="url(#glow)">
+                        <rect x="480" y="150" width="200" height="200" rx="10" fill="none" stroke="var(--cyan)" stroke-width="2"/>
+                        <text x="580" y="180" text-anchor="middle" fill="var(--cyan)" font-size="14" font-family="Orbitron">NEURAL CORE</text>
+                        
+                        <!-- Neural network visualization -->
+                        <circle cx="520" cy="220" r="10" fill="var(--cyan)" class="neuron"/>
+                        <circle cx="520" cy="260" r="10" fill="var(--purple)" class="neuron"/>
+                        <circle cx="520" cy="300" r="10" fill="var(--green)" class="neuron"/>
+                        
+                        <circle cx="580" cy="240" r="12" fill="var(--cyan)" class="neuron"/>
+                        <circle cx="580" cy="280" r="12" fill="var(--purple)" class="neuron"/>
+                        
+                        <circle cx="640" cy="220" r="10" fill="var(--orange)" class="neuron"/>
+                        <circle cx="640" cy="260" r="10" fill="var(--cyan)" class="neuron"/>
+                        <circle cx="640" cy="300" r="10" fill="var(--green)" class="neuron"/>
+                        
+                        <!-- Connections -->
+                        <line x1="530" y1="220" x2="568" y2="240" stroke="rgba(0,255,255,0.3)" stroke-width="1"/>
+                        <line x1="530" y1="260" x2="568" y2="240" stroke="rgba(138,43,226,0.3)" stroke-width="1"/>
+                        <line x1="530" y1="260" x2="568" y2="280" stroke="rgba(138,43,226,0.3)" stroke-width="1"/>
+                        <line x1="530" y1="300" x2="568" y2="280" stroke="rgba(0,255,136,0.3)" stroke-width="1"/>
+                        <line x1="592" y1="240" x2="630" y2="220" stroke="rgba(0,255,255,0.3)" stroke-width="1"/>
+                        <line x1="592" y1="240" x2="630" y2="260" stroke="rgba(0,255,255,0.3)" stroke-width="1"/>
+                        <line x1="592" y1="280" x2="630" y2="260" stroke="rgba(138,43,226,0.3)" stroke-width="1"/>
+                        <line x1="592" y1="280" x2="630" y2="300" stroke="rgba(0,255,136,0.3)" stroke-width="1"/>
+                    </g>
+                    
+                    <!-- Output -->
+                    <path d="M680 250 L750 250" stroke="var(--cyan)" stroke-width="2" stroke-dasharray="8 4" class="flow-line"/>
+                    
+                    <g class="output-module" filter="url(#glow)">
+                        <rect x="750" y="130" width="200" height="240" rx="8" fill="none" stroke="var(--cyan)" stroke-width="2"/>
+                        <text x="850" y="160" text-anchor="middle" fill="var(--cyan)" font-size="12" font-family="Orbitron">SIMULATION OUTPUT</text>
+                        
+                        <!-- Graph visualization -->
+                        <rect x="770" y="180" width="160" height="80" fill="rgba(0,0,0,0.5)" stroke="rgba(0,255,255,0.3)" stroke-width="1"/>
+                        <polyline points="780,250 800,230 830,240 860,200 890,210 920,190" fill="none" stroke="var(--green)" stroke-width="2"/>
+                        <polyline points="780,250 800,245 830,220 860,235 890,230 920,220" fill="none" stroke="var(--purple)" stroke-width="2" stroke-dasharray="4 2"/>
+                        
+                        <!-- Labels -->
+                        <rect x="770" y="275" width="80" height="20" rx="4" fill="rgba(0,255,136,0.2)" stroke="var(--green)" stroke-width="1"/>
+                        <text x="810" y="289" text-anchor="middle" fill="var(--green)" font-size="9" font-family="Share Tech Mono">POSITIVE +12%</text>
+                        
+                        <rect x="770" y="305" width="80" height="20" rx="4" fill="rgba(255,136,0,0.2)" stroke="var(--orange)" stroke-width="1"/>
+                        <text x="810" y="319" text-anchor="middle" fill="var(--orange)" font-size="9" font-family="Share Tech Mono">RISK FACTOR</text>
+                        
+                        <rect x="770" y="335" width="80" height="20" rx="4" fill="rgba(138,43,226,0.2)" stroke="var(--purple)" stroke-width="1"/>
+                        <text x="810" y="349" text-anchor="middle" fill="var(--purple)" font-size="9" font-family="Share Tech Mono">SIDE EFFECTS</text>
+                    </g>
+                </svg>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <h2 class="section-title">CORE <span class="gradient-text">CAPABILITIES</span></h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="20" cy="20" r="15"/>
+                            <path d="M12 20h16M20 12v16"/>
+                        </svg>
+                    </div>
+                    <h3>Multi-Domain Analysis</h3>
+                    <p>Simultaneously models economic, environmental, and social impacts of any policy decision.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon purple">
+                        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="8" y="8" width="24" height="24" rx="4"/>
+                            <path d="M8 16h24M16 16v16"/>
+                        </svg>
+                    </div>
+                    <h3>Monte Carlo Simulation</h3>
+                    <p>Runs thousands of probabilistic scenarios to identify likely outcomes and edge cases.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon green">
+                        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M8 32 L16 24 L24 28 L32 16"/>
+                            <circle cx="8" cy="32" r="3"/>
+                            <circle cx="16" cy="24" r="3"/>
+                            <circle cx="24" cy="28" r="3"/>
+                            <circle cx="32" cy="16" r="3"/>
+                        </svg>
+                    </div>
+                    <h3>Feedback Loop Detection</h3>
+                    <p>Identifies unintended consequences and cascading effects across interconnected systems.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon orange">
+                        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="20" cy="20" r="12"/>
+                            <circle cx="20" cy="20" r="6"/>
+                            <circle cx="20" cy="20" r="2" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>UN SDG Alignment</h3>
+                    <p>Maps policy outcomes to United Nations Sustainable Development Goals for global context.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="demo-section">
+            <h2 class="section-title">LIVE <span class="gradient-text">DEMONSTRATION</span></h2>
+            <div class="demo-container">
+                <div class="demo-input">
+                    <label>POLICY INPUT</label>
+                    <textarea placeholder="Enter a policy proposal... (e.g., 'Implement carbon tax of $50 per ton')"></textarea>
+                    <button class="btn-primary">
+                        <span>RUN SIMULATION</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="demo-output">
+                    <div class="output-header">
+                        <span>SIMULATION RESULTS</span>
+                        <span class="status-dot"></span>
+                    </div>
+                    <div class="output-body">
+                        <p class="output-placeholder">Enter a policy to see AI-generated impact analysis...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

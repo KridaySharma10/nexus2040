@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Voting | NEXUS 2040</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="page-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="particle-canvas"></canvas>
+    <div class="scan-lines"></div>
+    
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 40 40" fill="none">
+                        <path d="M20 2L37 11V29L20 38L3 29V11L20 2Z" stroke="currentColor" stroke-width="2"/>
+                        <path d="M20 14L28 18.5V27.5L20 32L12 27.5V18.5L20 14Z" fill="currentColor"/>
+                    </svg>
+                </div>
+                <span>NEXUS<span class="highlight">2040</span></span>
+            </a>
+            <a href="../index.html" class="back-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                <span>BACK TO HUB</span>
+            </a>
+        </div>
+    </nav>
+
+    <main class="system-page">
+        <section class="page-hero">
+            <span class="system-tag">SYSTEM 03</span>
+            <h1 class="page-title">BLOCKCHAIN <span class="gradient-text">VOTING</span> SYSTEM</h1>
+            <p class="page-desc">
+                Transparent, tamper-proof student elections and school polls. Every vote is cryptographically 
+                secured and verified across distributed nodes using smart contracts and zero-knowledge proofs.
+            </p>
+            <div class="status-bar">
+                <div class="status-item">
+                    <span class="status-dot active"></span>
+                    <span>DECENTRALIZED</span>
+                </div>
+                <div class="status-item">
+                    <span>NODES: 1,247</span>
+                </div>
+                <div class="status-item">
+                    <span>100% SECURE</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="blueprint-section">
+            <h2 class="section-title">CHAIN <span class="gradient-text">ARCHITECTURE</span></h2>
+            <div class="large-blueprint">
+                <svg viewBox="0 0 1000 450" class="blueprint-svg">
+                    <defs>
+                        <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+                            <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,255,255,0.1)" stroke-width="0.5"/>
+                        </pattern>
+                    </defs>
+                    <rect width="1000" height="450" fill="url(#grid)"/>
+                    
+                    <!-- Blockchain -->
+                    <g class="blockchain">
+                        <rect x="50" y="170" width="100" height="100" rx="8" fill="rgba(0,255,255,0.1)" stroke="var(--cyan)" stroke-width="2" class="block"/>
+                        <text x="100" y="205" text-anchor="middle" fill="var(--cyan)" font-size="10" font-family="Orbitron">BLOCK</text>
+                        <text x="100" y="225" text-anchor="middle" fill="var(--cyan)" font-size="16" font-family="Orbitron">#1247</text>
+                        <text x="100" y="250" text-anchor="middle" fill="var(--text-dim)" font-size="8" font-family="Share Tech Mono">0x7f3a...2c1d</text>
+                        
+                        <line x1="150" y1="220" x2="200" y2="220" stroke="var(--cyan)" stroke-width="3" stroke-dasharray="8 4" class="chain-link"/>
+                        
+                        <rect x="200" y="170" width="100" height="100" rx="8" fill="rgba(138,43,226,0.1)" stroke="var(--purple)" stroke-width="2" class="block"/>
+                        <text x="250" y="205" text-anchor="middle" fill="var(--purple)" font-size="10" font-family="Orbitron">BLOCK</text>
+                        <text x="250" y="225" text-anchor="middle" fill="var(--purple)" font-size="16" font-family="Orbitron">#1248</text>
+                        <text x="250" y="250" text-anchor="middle" fill="var(--text-dim)" font-size="8" font-family="Share Tech Mono">0x2b8c...9e4f</text>
+                        
+                        <line x1="300" y1="220" x2="350" y2="220" stroke="var(--purple)" stroke-width="3" stroke-dasharray="8 4" class="chain-link"/>
+                        
+                        <rect x="350" y="170" width="100" height="100" rx="8" fill="rgba(0,255,136,0.1)" stroke="var(--green)" stroke-width="2" class="block current"/>
+                        <text x="400" y="205" text-anchor="middle" fill="var(--green)" font-size="10" font-family="Orbitron">CURRENT</text>
+                        <text x="400" y="225" text-anchor="middle" fill="var(--green)" font-size="16" font-family="Orbitron">#1249</text>
+                        <text x="400" y="250" text-anchor="middle" fill="var(--text-dim)" font-size="8" font-family="Share Tech Mono">PENDING...</text>
+                    </g>
+                    
+                    <!-- Distributed Nodes -->
+                    <g class="nodes">
+                        <circle cx="600" cy="100" r="30" fill="none" stroke="var(--cyan)" stroke-width="2" class="node"/>
+                        <text x="600" y="105" text-anchor="middle" fill="var(--cyan)" font-size="10" font-family="Share Tech Mono">NODE</text>
+                        
+                        <circle cx="700" cy="150" r="30" fill="none" stroke="var(--purple)" stroke-width="2" class="node"/>
+                        <text x="700" y="155" text-anchor="middle" fill="var(--purple)" font-size="10" font-family="Share Tech Mono">NODE</text>
+                        
+                        <circle cx="750" cy="250" r="30" fill="none" stroke="var(--green)" stroke-width="2" class="node"/>
+                        <text x="750" y="255" text-anchor="middle" fill="var(--green)" font-size="10" font-family="Share Tech Mono">NODE</text>
+                        
+                        <circle cx="700" cy="350" r="30" fill="none" stroke="var(--orange)" stroke-width="2" class="node"/>
+                        <text x="700" y="355" text-anchor="middle" fill="var(--orange)" font-size="10" font-family="Share Tech Mono">NODE</text>
+                        
+                        <circle cx="600" cy="400" r="30" fill="none" stroke="var(--cyan)" stroke-width="2" class="node"/>
+                        <text x="600" y="405" text-anchor="middle" fill="var(--cyan)" font-size="10" font-family="Share Tech Mono">NODE</text>
+                        
+                        <circle cx="500" cy="350" r="30" fill="none" stroke="var(--purple)" stroke-width="2" class="node"/>
+                        <text x="500" y="355" text-anchor="middle" fill="var(--purple)" font-size="10" font-family="Share Tech Mono">NODE</text>
+                        
+                        <!-- Connections -->
+                        <line x1="600" y1="130" x2="670" y2="150" stroke="rgba(0,255,255,0.3)" stroke-width="1" class="node-link"/>
+                        <line x1="730" y1="150" x2="750" y2="220" stroke="rgba(138,43,226,0.3)" stroke-width="1" class="node-link"/>
+                        <line x1="750" y1="280" x2="730" y2="320" stroke="rgba(0,255,136,0.3)" stroke-width="1" class="node-link"/>
+                        <line x1="670" y1="350" x2="630" y2="370" stroke="rgba(255,136,0,0.3)" stroke-width="1" class="node-link"/>
+                        <line x1="570" y1="400" x2="530" y2="380" stroke="rgba(0,255,255,0.3)" stroke-width="1" class="node-link"/>
+                        <line x1="500" y1="320" x2="570" y2="130" stroke="rgba(138,43,226,0.3)" stroke-width="1" class="node-link"/>
+                    </g>
+                    
+                    <!-- Connection from chain to nodes -->
+                    <path d="M450 220 Q500 220 530 180" stroke="var(--green)" stroke-width="2" stroke-dasharray="5" class="data-flow"/>
+                    
+                    <!-- Verification Panel -->
+                    <g class="verify-panel">
+                        <rect x="820" y="100" width="150" height="250" rx="8" fill="rgba(0,0,0,0.5)" stroke="var(--cyan)" stroke-width="1"/>
+                        <text x="895" y="130" text-anchor="middle" fill="var(--cyan)" font-size="11" font-family="Orbitron">VERIFICATION</text>
+                        
+                        <rect x="840" y="150" width="110" height="30" rx="4" fill="rgba(0,255,136,0.2)" stroke="var(--green)" stroke-width="1"/>
+                        <text x="895" y="170" text-anchor="middle" fill="var(--green)" font-size="9" font-family="Share Tech Mono">HASH VALID</text>
+                        
+                        <rect x="840" y="190" width="110" height="30" rx="4" fill="rgba(0,255,136,0.2)" stroke="var(--green)" stroke-width="1"/>
+                        <text x="895" y="210" text-anchor="middle" fill="var(--green)" font-size="9" font-family="Share Tech Mono">SIGNATURE OK</text>
+                        
+                        <rect x="840" y="230" width="110" height="30" rx="4" fill="rgba(0,255,136,0.2)" stroke="var(--green)" stroke-width="1"/>
+                        <text x="895" y="250" text-anchor="middle" fill="var(--green)" font-size="9" font-family="Share Tech Mono">CONSENSUS 99%</text>
+                        
+                        <rect x="840" y="270" width="110" height="30" rx="4" fill="rgba(0,255,136,0.2)" stroke="var(--green)" stroke-width="1"/>
+                        <text x="895" y="290" text-anchor="middle" fill="var(--green)" font-size="9" font-family="Share Tech Mono">ZK PROOF</text>
+                        
+                        <text x="895" y="330" text-anchor="middle" fill="var(--green)" font-size="14" font-family="Orbitron">VERIFIED</text>
+                    </g>
+                </svg>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <h2 class="section-title">SECURITY <span class="gradient-text">FEATURES</span></h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="8" y="14" width="24" height="18" rx="3"/>
+                            <path d="M14 14V10a6 6 0 1 1 12 0v4"/>
+                        </svg>
+                    </div>
+                    <h3>End-to-End Encryption</h3>
+                    <p>Every vote is encrypted using military-grade cryptography before transmission.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon purple">
+                        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="20" cy="20" r="12"/>
+                            <path d="M20 12v8l6 3"/>
+                        </svg>
+                    </div>
+                    <h3>Zero-Knowledge Proofs</h3>
+                    <p>Verify vote validity without revealing voter identity or choice.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon green">
+                        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M8 20 L16 28 L32 12"/>
+                        </svg>
+                    </div>
+                    <h3>Consensus Protocol</h3>
+                    <p>Distributed validation ensures 99.99% consensus before block confirmation.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon orange">
+                        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="8" y="8" width="10" height="10" rx="2"/>
+                            <rect x="22" y="8" width="10" height="10" rx="2"/>
+                            <rect x="8" y="22" width="10" height="10" rx="2"/>
+                            <rect x="22" y="22" width="10" height="10" rx="2"/>
+                        </svg>
+                    </div>
+                    <h3>Immutable Ledger</h3>
+                    <p>Once recorded, votes cannot be altered, deleted, or manipulated.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../script.js"></script>
+    <style>
+        .block { animation: blockPulse 3s ease-in-out infinite; }
+        .block.current { animation: currentBlock 1.5s ease-in-out infinite; }
+        @keyframes blockPulse { 0%, 100% { filter: drop-shadow(0 0 5px currentColor); } 50% { filter: drop-shadow(0 0 15px currentColor); } }
+        @keyframes currentBlock { 0%, 100% { filter: drop-shadow(0 0 10px var(--green)); } 50% { filter: drop-shadow(0 0 25px var(--green)); } }
+        .chain-link { animation: chainFlow 1s linear infinite; }
+        @keyframes chainFlow { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -12; } }
+        .node { animation: nodePulse 2s ease-in-out infinite; }
+        @keyframes nodePulse { 0%, 100% { opacity: 0.7; } 50% { opacity: 1; } }
+        .node-link { stroke-dasharray: 5; animation: linkFlow 2s linear infinite; }
+        @keyframes linkFlow { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -10; } }
+        .data-flow { animation: dataFlowAnim 2s linear infinite; }
+        @keyframes dataFlowAnim { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -20; } }
+    </style>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Management | NEXUS 2040</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="page-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="particle-canvas"></canvas>
+    <div class="scan-lines"></div>
+    <nav class="nav"><div class="nav-container"><a href="../index.html" class="nav-logo"><div class="logo-icon"><svg viewBox="0 0 40 40" fill="none"><path d="M20 2L37 11V29L20 38L3 29V11L20 2Z" stroke="currentColor" stroke-width="2"/><path d="M20 14L28 18.5V27.5L20 32L12 27.5V18.5L20 14Z" fill="currentColor"/></svg></div><span>NEXUS<span class="highlight">2040</span></span></a><a href="../index.html" class="back-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg><span>BACK TO HUB</span></a></div></nav>
+
+    <main class="system-page">
+        <section class="page-hero">
+            <span class="system-tag">SYSTEM 08</span>
+            <h1 class="page-title">IOT <span class="gradient-text">SMART RESOURCE</span> MANAGEMENT</h1>
+            <p class="page-desc">Sensors track electricity usage, classroom occupancy, and auto-adjust lights, AC, and ventilation. Sustainable campus automation that saves money and energy.</p>
+            <div class="status-bar">
+                <div class="status-item"><span class="status-dot active"></span><span>ALL SENSORS ACTIVE</span></div>
+                <div class="status-item"><span>DEVICES: 2,847</span></div>
+                <div class="status-item"><span>SAVINGS: 34%</span></div>
+            </div>
+        </section>
+
+        <section class="blueprint-section">
+            <h2 class="section-title">SENSOR <span class="gradient-text">NETWORK</span></h2>
+            <div class="large-blueprint">
+                <svg viewBox="0 0 1000 400" class="blueprint-svg">
+                    <defs><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,255,255,0.1)" stroke-width="0.5"/></pattern></defs>
+                    <rect width="1000" height="400" fill="url(#grid)"/>
+                    
+                    <!-- Central Hub -->
+                    <g class="central-hub">
+                        <circle cx="500" cy="200" r="80" fill="none" stroke="var(--cyan)" stroke-width="3" class="hub-outer"/>
+                        <circle cx="500" cy="200" r="60" fill="none" stroke="var(--cyan)" stroke-width="2" stroke-dasharray="10 5" class="hub-middle"/>
+                        <circle cx="500" cy="200" r="40" fill="rgba(0,255,255,0.2)" stroke="var(--cyan)" stroke-width="2" class="hub-core"/>
+                        <text x="500" y="195" text-anchor="middle" fill="var(--cyan)" font-size="12" font-family="Orbitron">CENTRAL</text>
+                        <text x="500" y="210" text-anchor="middle" fill="var(--cyan)" font-size="12" font-family="Orbitron">HUB</text>
+                    </g>
+                    
+                    <!-- Sensor clusters -->
+                    <g class="sensor-cluster lights">
+                        <circle cx="200" cy="100" r="40" fill="rgba(255,136,0,0.2)" stroke="var(--orange)" stroke-width="2"/>
+                        <text x="200" y="95" text-anchor="middle" fill="var(--orange)" font-size="9" font-family="Share Tech Mono">LIGHTING</text>
+                        <text x="200" y="110" text-anchor="middle" fill="var(--orange)" font-size="11" font-family="Orbitron">247</text>
+                        <circle cx="160" cy="60" r="8" fill="var(--orange)" class="sensor-dot"/>
+                        <circle cx="200" cy="45" r="8" fill="var(--orange)" class="sensor-dot"/>
+                        <circle cx="240" cy="60" r="8" fill="var(--orange)" class="sensor-dot"/>
+                        <line x1="240" y1="100" x2="420" y2="180" stroke="var(--orange)" stroke-width="1" class="sensor-link"/>
+                    </g>
+                    
+                    <g class="sensor-cluster climate">
+                        <circle cx="200" cy="300" r="40" fill="rgba(0,255,136,0.2)" stroke="var(--green)" stroke-width="2"/>
+                        <text x="200" y="295" text-anchor="middle" fill="var(--green)" font-size="9" font-family="Share Tech Mono">HVAC</text>
+                        <text x="200" y="310" text-anchor="middle" fill="var(--green)" font-size="11" font-family="Orbitron">156</text>
+                        <circle cx="160" cy="340" r="8" fill="var(--green)" class="sensor-dot"/>
+                        <circle cx="200" cy="355" r="8" fill="var(--green)" class="sensor-dot"/>
+                        <circle cx="240" cy="340" r="8" fill="var(--green)" class="sensor-dot"/>
+                        <line x1="240" y1="300" x2="420" y2="220" stroke="var(--green)" stroke-width="1" class="sensor-link"/>
+                    </g>
+                    
+                    <g class="sensor-cluster occupancy">
+                        <circle cx="800" cy="100" r="40" fill="rgba(138,43,226,0.2)" stroke="var(--purple)" stroke-width="2"/>
+                        <text x="800" y="95" text-anchor="middle" fill="var(--purple)" font-size="9" font-family="Share Tech Mono">OCCUPANCY</text>
+                        <text x="800" y="110" text-anchor="middle" fill="var(--purple)" font-size="11" font-family="Orbitron">312</text>
+                        <circle cx="760" cy="60" r="8" fill="var(--purple)" class="sensor-dot"/>
+                        <circle cx="800" cy="45" r="8" fill="var(--purple)" class="sensor-dot"/>
+                        <circle cx="840" cy="60" r="8" fill="var(--purple)" class="sensor-dot"/>
+                        <line x1="760" y1="100" x2="580" y2="180" stroke="var(--purple)" stroke-width="1" class="sensor-link"/>
+                    </g>
+                    
+                    <g class="sensor-cluster power">
+                        <circle cx="800" cy="300" r="40" fill="rgba(0,255,255,0.2)" stroke="var(--cyan)" stroke-width="2"/>
+                        <text x="800" y="295" text-anchor="middle" fill="var(--cyan)" font-size="9" font-family="Share Tech Mono">POWER</text>
+                        <text x="800" y="310" text-anchor="middle" fill="var(--cyan)" font-size="11" font-family="Orbitron">89</text>
+                        <circle cx="760" cy="340" r="8" fill="var(--cyan)" class="sensor-dot"/>
+                        <circle cx="800" cy="355" r="8" fill="var(--cyan)" class="sensor-dot"/>
+                        <circle cx="840" cy="340" r="8" fill="var(--cyan)" class="sensor-dot"/>
+                        <line x1="760" y1="300" x2="580" y2="220" stroke="var(--cyan)" stroke-width="1" class="sensor-link"/>
+                    </g>
+                    
+                    <!-- Stats panel -->
+                    <g class="stats-panel">
+                        <rect x="50" y="170" width="100" height="60" rx="6" fill="rgba(0,0,0,0.5)" stroke="var(--green)" stroke-width="1"/>
+                        <text x="100" y="190" text-anchor="middle" fill="var(--green)" font-size="9" font-family="Share Tech Mono">ENERGY SAVED</text>
+                        <text x="100" y="215" text-anchor="middle" fill="var(--green)" font-size="18" font-family="Orbitron">34%</text>
+                    </g>
+                    
+                    <g class="stats-panel">
+                        <rect x="850" y="170" width="100" height="60" rx="6" fill="rgba(0,0,0,0.5)" stroke="var(--cyan)" stroke-width="1"/>
+                        <text x="900" y="190" text-anchor="middle" fill="var(--cyan)" font-size="9" font-family="Share Tech Mono">CO2 REDUCED</text>
+                        <text x="900" y="215" text-anchor="middle" fill="var(--cyan)" font-size="18" font-family="Orbitron">28T</text>
+                    </g>
+                </svg>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <h2 class="section-title">AUTOMATION <span class="gradient-text">FEATURES</span></h2>
+            <div class="features-grid">
+                <div class="feature-card"><div class="feature-icon orange"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><circle cx="20" cy="12" r="6"/><path d="M20 18v14M14 28l6 4 6-4"/></svg></div><h3>Smart Lighting</h3><p>Auto-dimming based on occupancy and natural light levels.</p></div>
+                <div class="feature-card"><div class="feature-icon green"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><circle cx="20" cy="20" r="12"/><path d="M20 12v8M16 24l4-4 4 4"/></svg></div><h3>Climate Control</h3><p>AI-optimized HVAC adjustments for comfort and efficiency.</p></div>
+                <div class="feature-card"><div class="feature-icon purple"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><circle cx="15" cy="15" r="5"/><circle cx="25" cy="25" r="5"/><path d="M18 18l4 4"/></svg></div><h3>Occupancy Sensing</h3><p>Real-time room usage tracking for optimal scheduling.</p></div>
+                <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><rect x="10" y="15" width="20" height="15" rx="2"/><path d="M15 15v-3a5 5 0 0 1 10 0v3"/></svg></div><h3>Energy Monitoring</h3><p>Live power consumption tracking with anomaly detection.</p></div>
+            </div>
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../script.js"></script>
+    <style>.hub-outer{animation:hubPulse 3s ease-in-out infinite}@keyframes hubPulse{0%,100%{r:80}50%{r:85}}.hub-middle{animation:hubRotate 20s linear infinite}@keyframes hubRotate{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}.sensor-dot{animation:sensorPulse 1.5s ease-in-out infinite}@keyframes sensorPulse{0%,100%{r:8;opacity:1}50%{r:12;opacity:0.5}}.sensor-link{stroke-dasharray:10;animation:linkFlow 2s linear infinite}@keyframes linkFlow{from{stroke-dashoffset:0}to{stroke-dashoffset:-20}}</style>
+</body>
+</html>

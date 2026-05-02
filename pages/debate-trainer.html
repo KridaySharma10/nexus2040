@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Debate Trainer | NEXUS 2040</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="page-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="particle-canvas"></canvas>
+    <div class="scan-lines"></div>
+    
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">
+                <div class="logo-icon"><svg viewBox="0 0 40 40" fill="none"><path d="M20 2L37 11V29L20 38L3 29V11L20 2Z" stroke="currentColor" stroke-width="2"/><path d="M20 14L28 18.5V27.5L20 32L12 27.5V18.5L20 14Z" fill="currentColor"/></svg></div>
+                <span>NEXUS<span class="highlight">2040</span></span>
+            </a>
+            <a href="../index.html" class="back-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg><span>BACK TO HUB</span></a>
+        </div>
+    </nav>
+
+    <main class="system-page">
+        <section class="page-hero">
+            <span class="system-tag">SYSTEM 04</span>
+            <h1 class="page-title">AI <span class="gradient-text">DEBATE</span> TRAINER</h1>
+            <p class="page-desc">Students debate against AI trained on different country positions. Practice argumentation skills with real-time feedback on logic, evidence, and diplomatic tone.</p>
+            <div class="status-bar">
+                <div class="status-item"><span class="status-dot active"></span><span>AI READY</span></div>
+                <div class="status-item"><span>POSITIONS: 195</span></div>
+                <div class="status-item"><span>TOPICS: 500+</span></div>
+            </div>
+        </section>
+
+        <section class="blueprint-section">
+            <h2 class="section-title">DEBATE <span class="gradient-text">INTERFACE</span></h2>
+            <div class="large-blueprint">
+                <svg viewBox="0 0 1000 450" class="blueprint-svg">
+                    <defs><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,255,255,0.1)" stroke-width="0.5"/></pattern></defs>
+                    <rect width="1000" height="450" fill="url(#grid)"/>
+                    
+                    <!-- Student Side -->
+                    <g class="student-side">
+                        <rect x="50" y="100" width="200" height="250" rx="10" fill="rgba(0,255,255,0.1)" stroke="var(--cyan)" stroke-width="2"/>
+                        <circle cx="150" cy="160" r="40" fill="none" stroke="var(--cyan)" stroke-width="2"/>
+                        <text x="150" y="165" text-anchor="middle" fill="var(--cyan)" font-size="14" font-family="Orbitron">YOU</text>
+                        <text x="150" y="220" text-anchor="middle" fill="var(--text-primary)" font-size="12" font-family="Orbitron">STUDENT</text>
+                        <text x="150" y="240" text-anchor="middle" fill="var(--text-dim)" font-size="10" font-family="Share Tech Mono">POSITION: INDIA</text>
+                        <rect x="70" y="260" width="160" height="30" rx="4" fill="rgba(0,0,0,0.5)" stroke="rgba(0,255,255,0.3)"/>
+                        <text x="150" y="280" text-anchor="middle" fill="var(--cyan)" font-size="9" font-family="Share Tech Mono">SPEAKING...</text>
+                        <rect x="70" y="300" width="160" height="40" rx="4" fill="rgba(0,255,136,0.2)" stroke="var(--green)"/>
+                        <text x="150" y="325" text-anchor="middle" fill="var(--green)" font-size="11" font-family="Orbitron">SCORE: 87</text>
+                    </g>
+                    
+                    <!-- VS -->
+                    <g class="vs-indicator">
+                        <circle cx="500" cy="225" r="50" fill="none" stroke="var(--orange)" stroke-width="3" stroke-dasharray="10 5" class="vs-ring"/>
+                        <text x="500" y="235" text-anchor="middle" fill="var(--orange)" font-size="24" font-family="Orbitron">VS</text>
+                    </g>
+                    
+                    <!-- Debate arrows -->
+                    <path d="M260 200 Q380 150 440 180" stroke="var(--cyan)" stroke-width="2" fill="none" marker-end="url(#arrow)" class="debate-arrow"/>
+                    <path d="M560 180 Q620 150 740 200" stroke="var(--purple)" stroke-width="2" fill="none" marker-end="url(#arrow)" class="debate-arrow"/>
+                    
+                    <!-- AI Side -->
+                    <g class="ai-side">
+                        <rect x="750" y="100" width="200" height="250" rx="10" fill="rgba(138,43,226,0.1)" stroke="var(--purple)" stroke-width="2"/>
+                        <circle cx="850" cy="160" r="40" fill="none" stroke="var(--purple)" stroke-width="2"/>
+                        <text x="850" y="165" text-anchor="middle" fill="var(--purple)" font-size="14" font-family="Orbitron">AI</text>
+                        <text x="850" y="220" text-anchor="middle" fill="var(--text-primary)" font-size="12" font-family="Orbitron">OPPONENT</text>
+                        <text x="850" y="240" text-anchor="middle" fill="var(--text-dim)" font-size="10" font-family="Share Tech Mono">POSITION: USA</text>
+                        <rect x="770" y="260" width="160" height="30" rx="4" fill="rgba(0,0,0,0.5)" stroke="rgba(138,43,226,0.3)"/>
+                        <text x="850" y="280" text-anchor="middle" fill="var(--purple)" font-size="9" font-family="Share Tech Mono">ANALYZING...</text>
+                        <rect x="770" y="300" width="160" height="40" rx="4" fill="rgba(138,43,226,0.2)" stroke="var(--purple)"/>
+                        <text x="850" y="325" text-anchor="middle" fill="var(--purple)" font-size="11" font-family="Orbitron">SCORE: 82</text>
+                    </g>
+                    
+                    <!-- Feedback Panel -->
+                    <g class="feedback-panel">
+                        <rect x="350" y="380" width="300" height="60" rx="6" fill="rgba(0,0,0,0.5)" stroke="var(--green)" stroke-width="1"/>
+                        <text x="500" y="405" text-anchor="middle" fill="var(--green)" font-size="11" font-family="Orbitron">REAL-TIME FEEDBACK</text>
+                        <text x="500" y="425" text-anchor="middle" fill="var(--text-dim)" font-size="9" font-family="Share Tech Mono">LOGIC: 92% | EVIDENCE: 85% | DIPLOMACY: 88%</text>
+                    </g>
+                </svg>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <h2 class="section-title">TRAINING <span class="gradient-text">FEATURES</span></h2>
+            <div class="features-grid">
+                <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><circle cx="20" cy="15" r="8"/><path d="M8 35c0-8 6-12 12-12s12 4 12 12"/></svg></div><h3>195 Country Positions</h3><p>AI trained on diplomatic stances of every UN member nation.</p></div>
+                <div class="feature-card"><div class="feature-icon purple"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><rect x="8" y="8" width="24" height="24" rx="4"/><path d="M14 20h12M20 14v12"/></svg></div><h3>Real-Time Scoring</h3><p>Instant feedback on argument quality, logical structure, and persuasion.</p></div>
+                <div class="feature-card"><div class="feature-icon green"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 28l8-8 8 8M12 20l8-8 8 8"/></svg></div><h3>Progressive Difficulty</h3><p>AI adapts to your skill level, increasing challenge as you improve.</p></div>
+                <div class="feature-card"><div class="feature-icon orange"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><circle cx="20" cy="20" r="12"/><path d="M20 12v8l5 5"/></svg></div><h3>Session Analytics</h3><p>Detailed breakdown of strengths, weaknesses, and improvement areas.</p></div>
+            </div>
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../script.js"></script>
+    <style>.vs-ring{animation:vsRotate 10s linear infinite}@keyframes vsRotate{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}.debate-arrow{stroke-dasharray:200;animation:arrowFlow 3s ease-in-out infinite alternate}@keyframes arrowFlow{from{stroke-dashoffset:200}to{stroke-dashoffset:0}}</style>
+</body>
+</html>
